@@ -1,0 +1,23 @@
+{
+  "name": "arangetram",
+  "version": "1.0.0",
+  "description": "Elisa Abraham's Arangetram website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilabraham/arangetram.git"
+  },
+  "keywords": [
+    "event",
+    "website"
+  ],
+  "author": "Emil Abraham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilabraham/arangetram/issues"
+  },
+  "homepage": "https://github.com/emilabraham/arangetram#readme"
+}
