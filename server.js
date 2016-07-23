@@ -4,6 +4,7 @@ var express = require('express')
   , homepage = require('pug').compileFile(__dirname + '/source/templates/homepage.pug')
   , contact = require('pug').compileFile(__dirname + '/source/templates/contact.pug')
   , about = require('pug').compileFile(__dirname + '/source/templates/about.pug')
+  , invitation = require('pug').compileFile(__dirname + '/source/templates/invitation.pug')
 
 app.use(logger('dev'))
 app.use(express.static(__dirname + '/static'))
@@ -29,6 +30,15 @@ app.get('/contact', function (req, res, next) {
 app.get('/about', function (req, res, next) {
   try {
     var html = about()
+    res.send(html)
+  } catch (e) {
+    next(e)
+  }
+})
+
+app.get('/invitation', function (req, res, next) {
+  try {
+    var html = invitation()
     res.send(html)
   } catch (e) {
     next(e)
