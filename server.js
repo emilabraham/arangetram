@@ -45,6 +45,12 @@ app.get('/invitation', function (req, res, next) {
   }
 })
 
+app.use('/gallery', require('node-gallery')({
+    staticFiles : 'resources/photos',
+      urlRoot : 'gallery', 
+        title : 'Example Gallery'
+}));
+
 app.listen(process.env.PORT || 3000, function () {
     console.log('Listening on http://localhost:' + (process.env.PORT || 3000))
 })
