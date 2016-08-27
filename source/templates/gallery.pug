@@ -1,4 +1,6 @@
 extend default
 
 block content
-    p #{photos[0].url}
+    ul
+        each photo in photos
+             img(src= photo.src)
