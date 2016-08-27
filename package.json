@@ -29,6 +29,7 @@
     "bootstrap": "^3.3.6",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
+    "node-gallery": "^1.1.0",
     "nodemon": "^1.9.2",
     "pug": "^2.0.0-beta3",
     "stylus": "^0.54.5"
