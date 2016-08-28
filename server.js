@@ -47,14 +47,10 @@ app.get('/invitation', function (req, res, next) {
 });
 
 app.use('/gallery', require('node-gallery')({
-    staticFiles : 'resources/photos',
-    urlRoot : 'gallery', 
-    title : 'Example Gallery',
-    render : false,
-    thumbnail: {
-      width: 100,
-      height: 100
-    }
+  staticFiles : 'resources/photos',
+  urlRoot : 'gallery',
+  title : 'Example Gallery',
+  render : false
 }), function(req, res, next){
   //This chained function is necessary because render is false. This is to pass
   //the returned JSON into a template. The template then figures out what to do
@@ -65,11 +61,11 @@ app.use('/gallery', require('node-gallery')({
 });
 
 /*app.use('/gallery', require('node-gallery')({
-  staticFiles : 'resources/photos',
-  urlRoot : 'gallery',
-  title : 'Example Gallery'
-}));*/
+ staticFiles : 'resources/photos',
+ urlRoot : 'gallery',
+ title : 'Example Gallery'
+ }));*/
 
 app.listen(process.env.PORT || 3000, function () {
-    console.log('Listening on http://localhost:' + (process.env.PORT || 3000))
+  console.log('Listening on http://localhost:' + (process.env.PORT || 3000))
 });
