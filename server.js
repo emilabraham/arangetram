@@ -70,6 +70,6 @@ app.use('/gallery', require('node-gallery')({
   title : 'Example Gallery'
 }));*/
 
-app.listen(process.env.PORT || 3000, function () {
-    console.log('Listening on http://localhost:' + (process.env.PORT || 3000))
+app.listen(process.env.PORT || 3001, function () {
+    console.log('Listening on http://localhost:' + (process.env.PORT || 3001))
 });
