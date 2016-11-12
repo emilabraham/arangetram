@@ -3,4 +3,5 @@ extend default
 block content
     ul
         each photo in photos
-            img(src= photo.src)
+            a(href=photo.src)
+                img(src=photo.src)
