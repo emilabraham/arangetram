@@ -3,5 +3,6 @@ extend default
 block content
     ul
         each photo in photos
+          div.thumbnail
             a(href=photo.src)
-                img(src=photo.src)
+                img.img-thumbnail(src=photo.src)
