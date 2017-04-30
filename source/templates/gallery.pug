@@ -3,6 +3,5 @@ extend default
 block content
     ul
         each photo in photos
-          div.thumbnail
-            a(href=photo.src)
-                img.img-thumbnail(src=photo.src)
+            a(href='/photos/' + photo.src.substring(14))
+                img(src=photo.src)

@@ -9,6 +9,7 @@ var express = require('express')
 
 app.use(logger('dev'));
 app.use(express.static(__dirname + '/static'));
+app.use(express.static(__dirname + '/resources'));
 
 app.get('/', function (req, res, next) {
   try {
@@ -46,15 +47,15 @@ app.get('/aboutGuru', function (req, res, next) {
 });
 
 app.use('/gallery', require('node-gallery')({
-  staticFiles : 'resources/photos',
+  staticFiles : 'resources/photos/thumbnails',
   urlRoot : 'gallery',
-  title : 'Example Gallery',
-  render : false
+  render: false,
+  title : 'Example Gallery'
 }), function(req, res, next){
   //This chained function is necessary because render is false. This is to pass
   //the returned JSON into a template. The template then figures out what to do
   //with the data.
-  console.log(req.data);
+  // console.log(req.data);
   var html = gallery(req.data);
   return res.send(html);
 });
