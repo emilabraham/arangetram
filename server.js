@@ -5,7 +5,8 @@ var express = require('express')
   , contact = require('pug').compileFile(__dirname + '/source/templates/contact.pug')
   , about = require('pug').compileFile(__dirname + '/source/templates/about.pug')
   , gallery = require('pug').compileFile(__dirname + '/source/templates/gallery.pug')
-  , aboutGuru = require('pug').compileFile(__dirname + '/source/templates/aboutGuru.pug');
+  , aboutGuru = require('pug').compileFile(__dirname + '/source/templates/aboutGuru.pug')
+  , brochure = require('pug').compileFile(__dirname + '/source/templates/brochure.pug');
 
 app.use(logger('dev'));
 app.use(express.static(__dirname + '/static'));
@@ -40,6 +41,14 @@ app.get('/about', function (req, res, next) {
 app.get('/aboutGuru', function (req, res, next) {
   try {
     var html = aboutGuru();
+    res.send(html)
+  } catch (e) {
+    next(e)
+  }
+});
+app.get('/brochure', function (req, res, next) {
+  try {
+    var html = brochure();
     res.send(html)
   } catch (e) {
     next(e)
