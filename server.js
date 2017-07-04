@@ -6,7 +6,8 @@ var express = require('express')
   , about = require('pug').compileFile(__dirname + '/source/templates/about.pug')
   , gallery = require('pug').compileFile(__dirname + '/source/templates/gallery.pug')
   , aboutGuru = require('pug').compileFile(__dirname + '/source/templates/aboutGuru.pug')
-  , brochure = require('pug').compileFile(__dirname + '/source/templates/brochure.pug');
+  , brochure = require('pug').compileFile(__dirname + '/source/templates/brochure.pug')
+  , orchestra = require('pug').compileFile(__dirname + '/source/templates/orchestra.pug');
 
 app.use(logger('dev'));
 app.use(express.static(__dirname + '/static'));
@@ -67,6 +68,15 @@ app.use('/gallery', require('node-gallery')({
   // console.log(req.data);
   var html = gallery(req.data);
   return res.send(html);
+});
+
+app.get('/orchestra', function (req, res, next) {
+  try {
+    var html = orchestra();
+    res.send(html)
+  } catch (e) {
+    next(e)
+  }
 });
 
 /*app.use('/gallery', require('node-gallery')({
