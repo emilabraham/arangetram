@@ -57,15 +57,15 @@ app.get('/brochure', function (req, res, next) {
 });
 
 app.use('/gallery', require('node-gallery')({
-  staticFiles : 'resources/photos/thumbnails',
+  staticFiles : 'resources/gallery',
   urlRoot : 'gallery',
   render: false,
-  title : 'Example Gallery'
+  title : 'Photoshoot'
 }), function(req, res, next){
   //This chained function is necessary because render is false. This is to pass
   //the returned JSON into a template. The template then figures out what to do
   //with the data.
-  // console.log(req.data);
+  console.log(req.data);
   var html = gallery(req.data);
   return res.send(html);
 });
