@@ -1,6 +1,8 @@
 extend default
 //- Separated into photo list or album list Clicking an album will automatically show the photos list
 block content
+    if photos.length != 0
+        a(href="/gallery") Back to Gallery
     ul.albumList
         each album in albums
             li
@@ -10,7 +12,5 @@ block content
             a(href="/allPhotos/"+photo.name.substring(6)+".jpg")
                 img(src="/"+photo.src)
 
-    if photos.length == 0
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/c0tum7NYSSU?rel=0" frameborder="0" allowfullscreen></iframe>
-    else
+    if photos.length != 0
         a(href="/gallery") Back to Gallery
