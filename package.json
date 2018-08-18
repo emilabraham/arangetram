@@ -26,13 +26,13 @@
   },
   "homepage": "https://github.com/emilabraham/arangetram#readme",
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "express": "^4.14.0",
-    "morgan": "^1.7.0",
+    "bootstrap": "^4.1.3",
+    "express": "^4.16.0",
+    "morgan": "^1.9.0",
     "node-gallery": "^1.1.0",
-    "nodemon": "^1.9.2",
-    "pug": "^2.0.0-beta3",
-    "screenfull": "^3.0.2",
+    "nodemon": "^1.18.3",
+    "pug": "^2.0.3",
+    "screenfull": "^3.3.2",
     "stylus": "^0.54.5"
   }
 }
