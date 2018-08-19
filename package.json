@@ -29,7 +29,7 @@
     "bootstrap": "^4.1.3",
     "express": "^4.16.0",
     "morgan": "^1.9.0",
-    "node-gallery": "^1.1.0",
+    "node-gallery": "emilabraham/node-gallery",
     "nodemon": "^1.18.3",
     "pug": "^2.0.3",
     "screenfull": "^3.3.2",
